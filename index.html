@@ -2,7 +2,6 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Toko Tas Kita</title>
 
@@ -10,19 +9,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
 
     <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
 
-    <!-- CSS Kamu -->
+    <!-- Your CSS -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
-    <!-- Navbar start -->
+    <!-- Navbar -->
     <nav class="navbar">
       <a href="#" class="navbar-logo">ToteMood<span>.</span>.</a>
 
@@ -36,7 +35,9 @@
 
       <div class="navbar-extra">
         <a href="#" id="search-button"><i data-feather="search"></i></a>
-        <a href="#" id="shopping-cart-button"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="shopping-cart-button"
+          ><i data-feather="shopping-cart"></i
+        ></a>
         <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
       </div>
 
@@ -48,12 +49,25 @@
 
       <!-- Shopping Cart -->
       <div class="shopping-cart">
-        
-        <!-- SUMMARY -->
+        <!-- Item akan ditambahkan JS -->
+
         <div class="cart-summary">
-          <div class="cart-count">Item: 0</div>
-          <div class="cart-total">Total: IDR 0</div>
-          <a href="#" id="checkout-btn" class="checkout-btn">Bayar Sekarang</a>
+          <p><strong>Item:</strong> <span id="cart-count">0</span></p>
+          <p><strong>Total:</strong> <span id="cart-total">IDR 0</span></p>
+
+          <a
+            id="checkout-btn"
+            style="
+              display: inline-block;
+              margin-top: 10px;
+              padding: 10px 15px;
+              background: #d32590;
+              color: white;
+              border-radius: 8px;
+              text-decoration: none;
+            "
+            >Bayar via WhatsApp</a
+          >
         </div>
       </div>
     </nav>
@@ -88,7 +102,7 @@
           </p>
           <p>
             Dari tas kulit asli hingga bahan sintetis ramah lingkungan, kami
-            berkomitmen memberikan produk terbaik dengan harga terjangkau.
+            berkomitmen untuk memberikan produk terbaik dengan harga terjangkau.
           </p>
         </div>
       </div>
@@ -97,21 +111,29 @@
     <!-- Kategori -->
     <section id="kategori" class="menu">
       <h2><span>Kategori</span> Tas Kami</h2>
+      <p>
+        Jelajahi berbagai kategori tas yang kami tawarkan, mulai dari tas
+        sehari-hari hingga tas khusus untuk petualangan.
+      </p>
 
       <div class="row">
-
         <div class="menu-card">
-          <img src="img/tas ransel pink.jpg" alt="PinkiePack" class="menu-card-img" />
-          <h3 class="menu-card-title">- PinkiePack -</h3>
-          <p class="menu-card-price"><a href="https://wa.me/6281295793043" target="_blank">IDR 250K</a></p>
+          <img src="img/tas ransel pink.jpg" class="menu-card-img" />
+          <h3>- PinkiePack -</h3>
+          <p>IDR 250K</p>
         </div>
 
         <div class="menu-card">
-          <img src="img/4.jpg" alt="Formal Handbag" class="menu-card-img" />
-          <h3 class="menu-card-title">- Formal Handbag -</h3>
-          <p class="menu-card-price"><a href="https://wa.me/6281295793043" target="_blank">IDR 350K</a></p>
+          <img src="img/4.jpg" class="menu-card-img" />
+          <h3>- Formal Handbag -</h3>
+          <p>IDR 350K</p>
         </div>
 
+        <div class="menu-card">
+          <img src="img/3.jpg" class="menu-card-img" />
+          <h3>- Urbanora Bag -</h3>
+          <p>IDR 200K</p>
+        </div>
       </div>
     </section>
 
@@ -120,45 +142,59 @@
       <h2><span>Best Seller</span> Bag</h2>
 
       <div class="row">
-
-        <!-- PRODUCT 1 -->
-        <div class="product-card"
+        <!-- PRODUK 1 -->
+        <div
+          class="product-card"
           data-name="Aurale Bag"
           data-price="250000"
-          data-img="img/tas kondangan 2.jpg">
-
+          data-img="img/tas kondangan 2.jpg"
+        >
           <div class="product-icons">
-            <a href="#" class="add-to-cart"><i data-feather="shopping-cart"></i></a>
-            <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
+            <a href="#" class="add-to-cart"
+              ><i data-feather="shopping-cart"></i
+            ></a>
           </div>
-          <div class="product-image">
-            <img src="img/tas kondangan 2.jpg" alt="Aurale Bag" />
-          </div>
-          <div class="product-content">
-            <h3>Aurale Bag</h3>
-            <div class="product-price">IDR 250K <span>IDR 300K</span></div>
-          </div>
+
+          <img src="img/tas kondangan 2.jpg" class="menu-card-img" />
+          <h3>Aurale Bag</h3>
+          <p>IDR 250K</p>
         </div>
 
-        <!-- PRODUCT 2 -->
-        <div class="product-card"
+        <!-- PRODUK 2 -->
+        <div
+          class="product-card"
           data-name="Tas Ransel Outdoor"
           data-price="350000"
-          data-img="img/tas kotak kotak .jpg">
-
+          data-img="img/tas kotak kotak .jpg"
+        >
           <div class="product-icons">
-            <a href="#" class="add-to-cart"><i data-feather="shopping-cart"></i></a>
-            <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
+            <a href="#" class="add-to-cart"
+              ><i data-feather="shopping-cart"></i
+            ></a>
           </div>
-          <div class="product-image">
-            <img src="img/tas kotak kotak .jpg" alt="Tas Ransel Outdoor" />
-          </div>
-          <div class="product-content">
-            <h3>Tas Ransel Outdoor</h3>
-            <div class="product-price">IDR 350K <span>IDR 255K</span></div>
-          </div>
+
+          <img src="img/tas kotak kotak .jpg" class="menu-card-img" />
+          <h3>Tas Ransel Outdoor</h3>
+          <p>IDR 350K</p>
         </div>
 
+        <!-- PRODUK 3 -->
+        <div
+          class="product-card"
+          data-name="Tas Tangan Wanita"
+          data-price="200000"
+          data-img="img/6.jpg"
+        >
+          <div class="product-icons">
+            <a href="#" class="add-to-cart"
+              ><i data-feather="shopping-cart"></i
+            ></a>
+          </div>
+
+          <img src="img/6.jpg" class="menu-card-img" />
+          <h3>Tas Tangan Wanita</h3>
+          <p>IDR 200K</p>
+        </div>
       </div>
     </section>
 
@@ -166,16 +202,45 @@
     <section id="contact" class="contact">
       <h2><span>Kontak</span> Kami</h2>
 
+      <p>
+        <a href="https://wa.me/6281295793043" target="_blank">
+          <button
+            style="
+              background-color: #d32590;
+              color: white;
+              border: none;
+              padding: 12px 20px;
+              border-radius: 8px;
+              cursor: pointer;
+            "
+          >
+            💬 Chat via WhatsApp
+          </button>
+        </a>
+      </p>
+
       <div class="row">
-        <iframe class="map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126748.56347862248!2d107.57311709235512!3d-6.903444341687889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6398252477f%3A0x146a1f93d3e815b2!2sBandung%2C%20Bandung%20City%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1672408575523!5m2!1sen!2sid"
-          allowfullscreen="" loading="lazy">
-        </iframe>
+        <iframe
+          class="map"
+          src="https://www.google.com/maps/embed?..."
+        ></iframe>
 
         <form action="">
-          <div class="input-group"><i data-feather="user"></i><input type="text" placeholder="nama" /></div>
-          <div class="input-group"><i data-feather="mail"></i><input type="text" placeholder="email" /></div>
-          <div class="input-group"><i data-feather="phone"></i><input type="text" placeholder="no hp" /></div>
+          <div class="input-group">
+            <i data-feather="user"></i>
+            <input type="text" placeholder="nama" />
+          </div>
+
+          <div class="input-group">
+            <i data-feather="mail"></i>
+            <input type="text" placeholder="email" />
+          </div>
+
+          <div class="input-group">
+            <i data-feather="phone"></i>
+            <input type="text" placeholder="no hp" />
+          </div>
+
           <button type="submit" class="btn">kirim pesan</button>
         </form>
       </div>
@@ -183,116 +248,105 @@
 
     <!-- Footer -->
     <footer>
-      <div class="socials">
-        <a href="#"><i data-feather="instagram"></i></a>
-        <a href="#"><i data-feather="twitter"></i></a>
-        <a href="#"><i data-feather="facebook"></i></a>
-      </div>
-
-      <div class="links">
-        <a href="#home">Home</a>
-        <a href="#about">Tentang Kami</a>
-        <a href="#kategori">Kategori</a>
-        <a href="#products">Produk</a>
-        <a href="#contact">Kontak</a>
-      </div>
-
-      <div class="credit">
-        <p>Created by <a href="">Rafifah</a>. | &copy; 2025.</p>
-      </div>
+      <p>Created by Rafifah © 2025.</p>
     </footer>
 
-    <!-- Feather Icons -->
-    <script>feather.replace();</script>
-
-    <!-- ========================= -->
-    <!--   JAVASCRIPT KERANJANG   -->
-    <!-- ========================= -->
+    <!-- SCRIPT ALL IN ONE -->
     <script>
+      feather.replace();
 
-      const cartContainer = document.querySelector(".shopping-cart");
-      const cartCountEl = document.querySelector(".cart-count");
-      const cartTotalEl = document.querySelector(".cart-total");
-      const checkoutBtn = document.getElementById("checkout-btn");
+      const cartBtn = document.querySelector("#shopping-cart-button");
+      const shoppingCart = document.querySelector(".shopping-cart");
 
-      let cartItems = [];
+      cartBtn.onclick = () => shoppingCart.classList.toggle("active");
 
-      function formatRupiah(num) {
-        return num.toLocaleString("id-ID");
+      const addToCartBtns = document.querySelectorAll(".add-to-cart");
+      const cartCountEl = document.querySelector("#cart-count");
+      const cartTotalEl = document.querySelector("#cart-total");
+
+      let cart = [];
+
+      function rupiah(x) {
+        return "IDR " + x.toLocaleString("id-ID");
       }
 
-      function updateCartSummary() {
-        const totalItems = cartItems.length;
-        const totalPrice = cartItems.reduce((a, b) => a + b.price, 0);
+      function updateCart() {
+        const oldItems = document.querySelectorAll(".cart-item");
+        oldItems.forEach((i) => i.remove());
 
-        cartCountEl.textContent = `Item: ${totalItems}`;
-        cartTotalEl.textContent = `Total: IDR ${formatRupiah(totalPrice)}`;
+        let total = 0;
+
+        cart.forEach((item, index) => {
+          total += item.price;
+
+          const div = document.createElement("div");
+          div.classList.add("cart-item");
+
+          div.innerHTML = `
+      <img src="${item.img}" alt="${
+            item.name
+          }" style="width:50px; height:50px; object-fit:cover;">
+      <div class="item-detail">
+        <h3>${item.name}</h3>
+        <div class="item-price">${rupiah(item.price)}</div>
+      </div>
+      <i data-feather="trash-2" class="remove-item" data-index="${index}" style="cursor:pointer; width:20px; height:20px; color:red;"></i>
+    `;
+
+          shoppingCart.prepend(div);
+        });
+
+        cartCountEl.textContent = cart.length;
+        cartTotalEl.textContent = rupiah(total);
+
+        feather.replace(); // kalau kamu pakai feather icons dan masih pakai <i>
+
+        // Tidak perlu pasang ulang event listener di sini
       }
 
-      document.querySelectorAll(".add-to-cart").forEach((btn) => {
+      // Event delegation, pasang 1 kali saja:
+      shoppingCart.addEventListener("click", function (e) {
+        if (e.target.classList.contains("remove-item")) {
+          const index = e.target.dataset.index;
+          cart.splice(index, 1);
+          updateCart();
+        }
+      });
+
+      addToCartBtns.forEach((btn) => {
         btn.addEventListener("click", (e) => {
           e.preventDefault();
 
-          const card = e.target.closest(".product-card");
+          const card = btn.closest(".product-card");
 
-          const item = {
+          cart.push({
             name: card.dataset.name,
             price: parseInt(card.dataset.price),
             img: card.dataset.img,
-          };
-
-          cartItems.push(item);
-
-          const element = document.createElement("div");
-          element.classList.add("cart-item");
-          element.innerHTML = `
-            <img src="${item.img}" alt="${item.name}">
-            <div class="item-detail">
-              <h3>${item.name}</h3>
-              <div class="item-price">IDR ${formatRupiah(item.price)}</div>
-            </div>
-            <i data-feather="trash-2" class="remove-item"></i>
-          `;
-
-          cartContainer.insertBefore(element, document.querySelector(".cart-summary"));
-
-          feather.replace();
-
-          element.querySelector(".remove-item").addEventListener("click", () => {
-            element.remove();
-            cartItems = cartItems.filter((i) => i !== item);
-            updateCartSummary();
           });
 
-          updateCartSummary();
+          updateCart();
         });
       });
 
-      checkoutBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-
-        if (cartItems.length === 0) {
-          alert("Keranjang masih kosong!");
+      document.querySelector("#checkout-btn").onclick = () => {
+        if (cart.length === 0) {
+          alert("Keranjang kosong!");
           return;
         }
 
-        let message = "*Hai! Saya ingin memesan:*\n\n";
+        let msg = "Halo! Saya ingin memesan:%0A";
 
-        cartItems.forEach((item, index) => {
-          message += `${index + 1}. ${item.name} - IDR ${formatRupiah(item.price)}\n`;
+        cart.forEach((i) => {
+          msg += `- ${i.name} (${rupiah(i.price)})%0A`;
         });
 
-        const total = cartItems.reduce((a, b) => a + b.price, 0);
+        const total = cart.reduce((s, i) => s + i.price, 0);
 
-        message += `\n*Total: IDR ${formatRupiah(total)}*\n\nMohon diproses ya 😊`;
+        msg += `%0ATotal: ${rupiah(total)}`;
 
-        const phone = "6281295793043";
-        const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-
-        window.open(url, "_blank");
-      });
-
+        window.open(`https://wa.me/6281295793043?text=${msg}`, "_blank");
+      };
     </script>
-
   </body>
 </html>
